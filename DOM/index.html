@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM</title>
+</head>
+    <style>
+        table{
+            border: 1px dashed red
+        }
+        tr{
+            background-color: #f8f8f8;
+
+        }
+        td{
+            line-height: 24px;
+        }
+    </style>
+<body>
+    <script>
+        var table = document.createElement('table');
+        table.border = 1;
+        table.width = '100%';
+        
+        var tbody = document.createElement('tbody');
+        table.appendChild(tbody);
+        
+        // 创建第一行
+        var row1 = document.createElement('tr');
+        tbody.appendChild(row1);
+        var cell_1 = document.createElement('td');
+        cell_1.appendChild(document.createTextNode('cell 1,1'));
+        row1.appendChild(cell_1);
+
+        var cell_2 = document.createElement('td');
+        cell_2.appendChild(document.createTextNode('cell 2,1'));
+        row1.appendChild(cell_2);
+
+        // 创建第二行
+        var row2 =  document.createElement('tr');
+        tbody.appendChild(row2);
+        var cell_3 = document.createElement('td');
+        cell_3.appendChild(document.createTextNode('cell 3,2'));
+        row2.appendChild(cell_3);
+
+        var cell_4= document.createElement('td');
+        cell_4.appendChild(document.createTextNode('cell 4,2'));
+        row2.appendChild(cell_4);
+
+        //将表格添加到文档中
+        document.body.appendChild(table);
+    </script>
+</body>
+
+</html>
